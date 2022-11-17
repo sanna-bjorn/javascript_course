@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <h1 class="header-title">Library</h1>
+        <button class="header-btn">
+          <img class="header-btn-svg" src="./icons/plus-circle.svg" alt="" />
+        </button>
+      </div>
+    </header>
+    <section class="form-modal">
+      <form class="book-form" id="book-form">
+        <a class="book-form-close" href="#"
+          ><img
+            class="book-form-close-svg"
+            src="./icons/close-thick.svg"
+            alt=""
+        /></a>
+        <fieldset class="book-form-fieldset">
+          <label for="book-form-name">Book Name</label>
+          <input
+            type="text"
+            id="book-form-name"
+            name="book-form-name"
+            required
+          />
+
+          <label for="book-form-author">Author</label>
+          <input
+            type="text"
+            id="book-form-author"
+            name="book-form-author"
+            required
+          />
+
+          <label for="book-form-pages">Pages</label>
+          <input
+            type="number"
+            id="book-form-pages"
+            name="book-form-pages"
+            max="999999999"
+            required
+          />
+          <div class="book-form-checkbox">
+            <label for="book-form-read">Have you read the book?</label>
+            <input type="checkbox" id="book-form-read" name="book-form-read" />
+          </div>
+        </fieldset>
+        <button class="book-form-btn" type="submit">Submit</button>
+      </form>
+    </section>
+    <script src="main.js"></script>
+    <footer class="footer">
+      <p>
+        Created by
+        <a
+          target="_blank"
+          class="footer-link"
+          href="https://github.com/sartzalainen"
+          >Sanna</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
