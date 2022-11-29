@@ -1,0 +1,52 @@
+* {
+  font-family: "Corinthia", cursive;
+  font-family: "Raleway", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.cat-image {
+  height: 100vw;
+}
+
+html {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: rgb(100, 50, 100);
+}
+h1 {
+  text-align: center;
+  background-color: rgb(150, 50, 100);
+}
+h1:hover {
+  transform: scale(2);
+}
+#navi {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(100, 50, 75);
+
+  justify-content: center;
+}
+button {
+  margin: 0px 200px 0px 200px;
+  padding: 20px;
+  background-color: rgb(100, 50, 150);
+}
+img {
+  max-width: 75%;
+  height: auto;
+  margin: 20px;
+}
+.description {
+  margin: 20px;
+}
+.description > div {
+  font-family: "Lucida Console", Monaco, monospace;
+}

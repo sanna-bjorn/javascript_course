@@ -21,6 +21,7 @@ const gameBoard = (() => {
   });
 
   // add event listeners on each square
+  // improve logic, separate concerns
   Array.from(squares.children).forEach((square, index) => {
     square.addEventListener("click", () => {
       // show active player marker
@@ -45,8 +46,6 @@ const gameBoard = (() => {
       }
     });
   });
-
-  // return
   return {
     board,
   };
@@ -64,8 +63,8 @@ const game = (() => {
   let remainingSpots = 9;
 
   // selectors
-  let subtext = document.querySelector(".subtext"); // display winner/tie
-  let playerName = document.querySelector(".player-name"); // purpose: alert player turn
+  let subtext = document.querySelector(".subtext"); // display game resutls
+  let playerName = document.querySelector(".player-name"); // display which player's turn it is
 
   // winning conditions
   const winningAxes = [
@@ -82,7 +81,6 @@ const game = (() => {
   // check winner
   function checkWinner() {
     winningAxes.forEach((item, index) => {
-      // [0, 1, 2, 3, 4, 5, 6, 7]
       if (
         gameBoard.board[item[0]] === this.activePlayer.marker &&
         gameBoard.board[item[1]] === this.activePlayer.marker &&
