@@ -10,10 +10,7 @@ function createAbout() {
 
   //about para
   const para = document.createElement("p");
-  para.innerHTML = `Want some overpriced food stuffed down your
-    throat by a bunch of overpolite waiters? Want to show your date 
-    how rich you really are? Dope Stuff is the place for you! 
-    Our prices are bad for your heart as well as your wallet. `;
+  para.innerHTML = `Content goes here `;
 
   about.appendChild(para);
   return about;
