@@ -1,6 +1,6 @@
-import loadMenu from "loadMenu.js";
-import loadPage from "loadInitPage.js";
-import loadHome from "loadHome.js";
+import loadMenu from "./loadMenu";
+import loadPage from "./loadInitPage";
+import loadHome from "./loadHome";
 
 init();
 
@@ -17,5 +17,3 @@ function init() {
   loadHome();
   addNavEvents();
 }
-
-pageDiv();

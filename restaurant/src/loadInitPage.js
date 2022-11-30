@@ -20,11 +20,9 @@ function createNav(id) {
 
   const homebtn = createBtn("home", "Home");
   const menubtn = createBtn("menu", "Menu");
-  //const aboutbtn = createBtn('about','About');
 
   navi.appendChild(homebtn);
   navi.appendChild(menubtn);
-  //navi.appendChild(aboutbtn);
 
   return navi;
 }
@@ -38,7 +36,7 @@ function loadPage() {
 
   const content = document.getElementById("content");
 
-  const header = createHeader("header", "DOPE STUFF");
+  const header = createHeader("header", "Best restaurant in the world");
   content.appendChild(header);
 
   const nav = createNav("navi");
@@ -47,4 +45,5 @@ function loadPage() {
   const tabContent = createMain("tab-content");
   content.appendChild(tabContent);
 }
+
 export default loadPage;

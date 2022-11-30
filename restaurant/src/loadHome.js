@@ -10,7 +10,7 @@ function createAbout() {
 
   //about para
   const para = document.createElement("p");
-  para.innerHTML = `Content goes here `;
+  para.innerHTML = `This is the best restaurant in the world (if you're a cat) `;
 
   about.appendChild(para);
   return about;
@@ -26,19 +26,13 @@ function setActBtn(id) {
 }
 
 function loadHome() {
-  // Add icon to the pages div
-  const pageContentImage = document.createElement("img");
-  pageContentImage.setAttribute("src", "../resources/cat.jpg");
-  pageContentImage.classList.add("cat-image");
-  pageContent.appendChild(pageContentImage);
-  pageDiv.appendChild(pageContent);
   const content = document.getElementById("tab-content");
   content.classList.add("flex");
 
   content.innerHTML = "";
 
   const aboutSec = createAbout();
-  //setActBtn('home');
+  setActBtn("home");
 
   content.appendChild(aboutSec);
 }
