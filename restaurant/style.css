@@ -17,11 +17,8 @@ body {
 h1 {
   padding: 10px;
   text-align: center;
-  font-size: 3.5em;
+  font-size: 2.5em;
   background-color: rgb(171, 97, 148);
-}
-h1:hover {
-  transform: scale(2);
 }
 #navi {
   display: flex;
