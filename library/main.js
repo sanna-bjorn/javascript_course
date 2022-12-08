@@ -173,4 +173,27 @@ function createBookCard(book, index) {
   bookSection.append(newCardDiv);
 }
 
+// Add form validation with JS
+const bookName = document.getElementById("book-form-name");
+
+bookName.addEventListener("input", (event) => {
+  if (bookName.validity.typeMismatch) {
+    bookName.setCustomValidity("I am expecting a book name!");
+    bookName.reportValidity();
+  } else {
+    bookName.setCustomValidity("");
+  }
+});
+
+const bookPages = document.getElementById("book-form-pages");
+
+bookPages.addEventListener("input", (event) => {
+  if (bookPages.validity.rangeUnderflow) {
+    bookPages.setCustomValidity("I am expecting at least 10 pages!");
+    bookPages.reportValidity();
+  } else {
+    bookPages.setCustomValidity("");
+  }
+});
+
 printBooks();
