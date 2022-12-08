@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="form-modal">
+      <form class="loginform" id="login-form">
+        <a class="login-form-close" href="#"
+          ><img
+            class="login-form-close-svg"
+            src="resources/close-box.png"
+            alt=""
+        /></a>
+        <fieldset class="login-form-fieldset">
+          <label for="login-form-email">Email</label>
+          <input
+            type="email"
+            id="login-form-email"
+            name="login-form-email"
+            required
+          />
+          <label for="login-form-country">Country</label>
+          <input
+            type="country"
+            id="login-form-country"
+            name="login-form-country"
+            required
+          />
+          <label for="login-form-country">Zip Code</label>
+          <input
+            type="number"
+            id="login-form-zip-code"
+            name="login-form-zip-code"
+            required
+          />
+          <label for="login-form-pw">Type a password</label>
+          <input
+            type="password"
+            id="login-form-pw"
+            name="login-form-pw"
+            required
+          />
+          <label for="login-form-pw-conf">Type the password again</label>
+          <input
+            type="password"
+            id="login-form-pw-conf"
+            name="login-form-pw-conf"
+            required
+          />
+          <script src="main.js" defer></script>
+        </fieldset>
+      </form>
+    </section>
+  </body>
+</html>
