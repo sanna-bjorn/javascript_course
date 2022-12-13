@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Corinthia&family=Raleway:wght@100&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <h1 class="header">Sign up form</h1>
     <section class="form-modal">
       <form class="loginform" id="login-form">
-        <a class="login-form-close" href="#"
-          ><img
-            class="login-form-close-svg"
-            src="resources/close-box.png"
-            alt=""
-        /></a>
         <fieldset class="login-form-fieldset">
           <label for="login-form-email">Email</label>
           <input
@@ -33,11 +34,13 @@
           />
           <label for="login-form-country">Zip Code</label>
           <input
-            type="number"
+            type="text"
+            onKeyUp="validateInput()"
             id="login-form-zip-code"
             name="login-form-zip-code"
             required
           />
+          <div id="msg"></div>
           <label for="login-form-pw">Type a password</label>
           <input
             type="password"
@@ -54,7 +57,15 @@
           />
           <script src="main.js" defer></script>
         </fieldset>
-        <button class="book-form-btn" type="submit">Submit</button>
+        <span id="wrong_pass_alert"></span>
+        <button
+          id="create"
+          onclick="SubmitEvent"
+          class="book-form-btn"
+          type="submit"
+        >
+          Submit
+        </button>
       </form>
     </section>
   </body>
