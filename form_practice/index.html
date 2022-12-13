@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Corinthia&family=Raleway:wght@100&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 class="header">Sign up form</h1>
+    <section class="form-modal">
+      <form class="loginform" id="login-form">
+        <fieldset class="login-form-fieldset">
+          <label for="login-form-email">Email</label>
+          <input
+            type="email"
+            id="login-form-email"
+            name="login-form-email"
+            required
+          />
+          <label for="login-form-country">Country</label>
+          <input
+            type="country"
+            id="login-form-country"
+            name="login-form-country"
+            required
+          />
+          <label for="login-form-country">Zip Code</label>
+          <input
+            type="text"
+            onKeyUp="validateInput()"
+            id="login-form-zip-code"
+            name="login-form-zip-code"
+            required
+          />
+          <div id="msg"></div>
+          <label for="login-form-pw">Type a password</label>
+          <input
+            type="password"
+            id="login-form-pw"
+            name="login-form-pw"
+            required
+          />
+          <label for="login-form-pw-conf">Type the password again</label>
+          <input
+            type="password"
+            id="login-form-pw-conf"
+            name="login-form-pw-conf"
+            required
+          />
+          <script src="main.js" defer></script>
+        </fieldset>
+        <span id="wrong_pass_alert"></span>
+        <button
+          id="create"
+          onclick="SubmitEvent"
+          class="book-form-btn"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </section>
+  </body>
+</html>
