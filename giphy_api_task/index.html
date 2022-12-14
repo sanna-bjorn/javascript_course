@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gif page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img class="gif_images" src="#" alt="cat" />
+    <script>
+      const img = document.querySelector("img");
+      fetch(
+        "https://api.giphy.com/v1/gifs/translate?api_key=zBsFqoIx3tj9BeXTAwLyKBWScuuvuzow&s=cat",
+        { mode: "cors" }
+      )
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (response) {
+          img.src = response.data.images.original.url;
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+
+      let changeBtn = document.getElementById("change_pic");
+
+      changeBtn.addEventListener("click", (e) => {
+        let gifImg = document.querySelector(".gif_images");
+        if (gifImg.style.display === "none") {
+          gifImg.style.display = "inline";
+        } else {
+          getPizzaImg().then((newGif) => (gifImg.src = newGif.image));
+        }
+      });
+
+      //   change_pic.addEventListener("click", (e) => {
+      //     formModal.classList.remove("active");
+      //     e.preventDefault();
+      //   });
+    </script>
+    <button id="change_pic" type="button" onclick>Change cat</button>
+  </body>
+</html>
