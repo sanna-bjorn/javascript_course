@@ -6,16 +6,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <input
+      type="text"
+      placeholder="search here..."
+      id="searchField"
+      value="cat"
+    />
     <img class="gif_images" src="#" alt="cat" />
     <button id="change_pic" type="submit" onclick="changeGifImage()">
-      Change the cat
+      Change the gif
     </button>
     <script>
+      const search = document.querySelector("#searchField");
       const img = document.querySelector("img");
       const btn = document.querySelector("button");
       function changeGifImage() {
         fetch(
-          "https://api.giphy.com/v1/gifs/translate?api_key=zBsFqoIx3tj9BeXTAwLyKBWScuuvuzow&s=cat",
+          "https://api.giphy.com/v1/gifs/translate?api_key=zBsFqoIx3tj9BeXTAwLyKBWScuuvuzow&s=cat" +
+            search.value,
           { mode: "cors" }
         )
           .then(function (response) {
