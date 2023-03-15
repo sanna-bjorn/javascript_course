@@ -16,3 +16,10 @@ Player
 -when generating new coordinates, check against the stored ones x
 -needs to know the size of the board
 -check the size of the board x
+
+Gameloop
+
+- set up a new game by creating Players and Gameboards x
+  -create 2 players and one gameboard x
+- populate each Gameboard with predetermined coordinates x
+  -create a method to start the game - player makes a move -> check if all ships are sunk, and switch to second player
