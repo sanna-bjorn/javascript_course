@@ -1,7 +1,7 @@
 class Ship {
   constructor(length) {
     this.length = length;
-    let hits = 0;
+    this.hits = 0;
   }
 
   hit() {
