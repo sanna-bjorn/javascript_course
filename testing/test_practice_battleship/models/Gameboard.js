@@ -5,24 +5,34 @@ class Gameboard {
     this.size = size;
   }
   placeShip(x, y, ship) {
+    if (this.board[x] === undefined) {
+      this.board[x] = [];
+    }
     this.board[x][y] = ship;
   }
   receiveAttack(x, y) {
-    if (this.board[x][y] != undefined) {
-      ship = this.board[x][y];
+    if (this.board[x] != undefined && this.board[x][y] != undefined) {
+      const ship = this.board[x][y];
       ship.hit();
     } else {
       this.missedShots.push([x, y]);
     }
   }
   isAllSunk() {
-    this.board.forEach((ships, x) => {
-      ships.forEach((ship, y) => {
-        if (!ship.isSunk()) {
+    for (let x = 0; x < this.size; x++) {
+      if (this.board[x] === undefined) {
+        continue;
+      }
+      for (let y = 0; y < this.size; y++) {
+        if (this.board[x][y] === undefined) {
+          continue;
+        }
+        if (!this.board[x][y].isSunk()) {
           return false;
         }
-      });
-    });
+      }
+    }
+
     return true;
   }
   getSize() {
@@ -30,4 +40,4 @@ class Gameboard {
   }
 }
 
-// 2 loops through all the ships to check if they are sunk or not. If you find a ship that is not sunk, stop the loop and return
+export default Gameboard;

@@ -1,13 +1,3 @@
-function Ship(length, numHits) {
-  let ship = {
-    lenght: length,
-    numHits: numHits,
-    isSunk: false,
-  };
-}
-
-function isSunk() {
-  if (shipLength.length < 0 && numHits * shipLength > 0) {
-    return true;
-  }
-}
+import Game from './models/Game.js';
+const game = new Game();
+game.play();

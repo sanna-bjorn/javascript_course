@@ -20,6 +20,7 @@ class Player {
 
     gameboard.receiveAttack(x, y);
     this.shots.push([x, y]);
+    console.log(`Move ${x} ${y}`);
   }
   getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -33,3 +34,5 @@ class Player {
     return true;
   }
 }
+
+export default Player;
